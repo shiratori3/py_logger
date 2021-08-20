@@ -17,11 +17,14 @@ log = logger.get_logger(__name__)
 
 
 def bin_template_run():
+    log.debug('bin.template running')
     log.info('bin.template running')
     log.info('The __name__ of bin.template is {}'.format(__name__))
 
 
 if __name__ == '__main__':
     from bin.test.template import bin_test_template_run
+    from bin.test.test.template import bin_test_test_template_run
     bin_template_run()
     bin_test_template_run()
+    bin_test_test_template_run()

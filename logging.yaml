@@ -57,6 +57,11 @@ handlers:
     maxBytes: 10485760 # 10MB
     backupCount: 20
     encoding: utf-8
+  console_debug:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
 root:
   level: INFO
   handlers: [console, error_handler, critical_handler]
@@ -66,11 +71,11 @@ loggers:
     level: INFO
     handlers: [console, debug_handler, info_handler, warning_handler, error_handler, critical_handler]
     propagate: no
+  bin.template:
+    level: DEBUG
+    handlers: [console_debug, debug_handler, info_handler, warning_handler, error_handler, critical_handler]
+    propagate: no
   src.manager.Logger:
     level: DEBUG
-    handlers: [console, debug_handler, info_handler, warning_handler, error_handler, critical_handler]
-    propagate: no
-  your_module_name:
-    level: ERROR
     handlers: [console, debug_handler, info_handler, warning_handler, error_handler, critical_handler]
     propagate: no
