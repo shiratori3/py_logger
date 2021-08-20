@@ -60,7 +60,7 @@ handlers:
   console_debug:
     class: logging.StreamHandler
     level: DEBUG
-    formatter: simple
+    formatter: verbose
     stream: ext://sys.stdout
 root:
   level: INFO
