@@ -14,3 +14,7 @@
 !logging.yaml
 !template_post.py
 /rsa/
+<<<<<<< Updated upstream
+=======
+D:\pycharm\py_sql_client\conf\conn
+>>>>>>> Stashed changes
