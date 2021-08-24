@@ -12,8 +12,8 @@ import sys
 from pathlib import Path
 sys.path.append(str(Path(__file__).parents[2]))
 
-from src.manager.Logger import logger
-log = logger.get_logger(__name__)
+from src.manager.LogManager import logmgr
+log = logmgr.get_logger(__name__)
 
 
 def bin_test_template_run():
