@@ -75,7 +75,7 @@ loggers:
     level: DEBUG
     handlers: [console_debug, debug_handler, info_handler, warning_handler, error_handler, critical_handler]
     propagate: no
-  src.manager.Logger:
+  src.manager.LogManager:
     level: DEBUG
     handlers: [console, debug_handler, info_handler, warning_handler, error_handler, critical_handler]
     propagate: no

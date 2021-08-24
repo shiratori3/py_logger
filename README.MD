@@ -21,8 +21,8 @@
 
 ## 使用方法
 
-- 在每个需配置logger的文件夹中导入已实例化的logger即可。不应在每个文件中分别实例化Logger并使用。
+- 在每个需配置logger的文件夹中导入已实例化的logmgr即可。不应在每个文件中分别实例化LogManager并使用。
 
 - 对于特别关注的文件，可在logging.yaml文件中对其独立设置handlers和loggers。其余文件会默认使用root记录器。
 
-- 样例见bin文件夹的三个template.py文件，其中bin/template.py已配置了独立的记录器，分别运行三个文件可帮助理解Logger的实际运行
+- 样例见bin文件夹的三个template.py文件，其中bin/template.py已配置了独立的记录器，分别运行三个文件可帮助理解LogManager的实际运行

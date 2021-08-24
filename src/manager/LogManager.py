@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
 '''
-@File    :   Logger.py
+@File    :   LogManager.py
 @Author  :   Billy Zhou
 @Time    :   2021/08/22
 @Desc    :   None
@@ -16,9 +16,10 @@ sys.path.append(str(cwdPath))
 import yaml
 import logging
 import logging.config
+from logging import Logger
 
 
-class Logger:
+class LogManager:
     """An instance of logging.
 
     Read logging.yaml as a dict to pass by logging.config.dictConfig().
@@ -65,7 +66,7 @@ class Logger:
             self.log.error('logging.yaml not exists in [{}]. Using the default configs.'.format(conf))
         self.log.info('logger inited')
 
-    def get_logger(self, name: str = ''):
+    def get_logger(self, name: str = '') -> Logger:
         """return a logger instance named name if name in logger.logger_list"""
         if self.logger_list:
             if name in self.logger_list:
@@ -80,8 +81,8 @@ class Logger:
 
 logging.basicConfig(level=logging.INFO)
 logging.info('Using the root handler.')
-logger = Logger()
+logmgr = LogManager()
 
 if __name__ == '__main__':
-    log = logger.get_logger(__name__)
+    log = logmgr.get_logger(__name__)
     print(log)
